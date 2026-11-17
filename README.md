@@ -56,7 +56,13 @@ ffmpeg -i <src>.y4m -vf scale=-2:<res>:flags=lanczos,format=yuv420p -an <codec a
 -c:v libsvtav1 -preset 4 -crf <crf> -g <keyint> -svtav1-params lp=4
 ```
 
-We used ffmpeg 9.0.2 for the encoding.
+The encodes used FFmpeg build `n9.0.2-23-g27b46f0fbc-20261008` (built with GCC 16.2.0) and these encoder versions:
+
+- libx264: x264 core 165
+- libx265: x265 4.3+49-020d7054
+- libvpx-vp9: libvpx 1.17.0
+- libaom-av1: libaom 3.15.1
+- libsvtav1: SVT-AV1 4.2.0-151-g5ed9ffbcb
 
 For quality analysis, we use [ffmpeg-quality-metrics](https://github.com/slhck/ffmpeg-quality-metrics) to compare each encode with the original clip. The encode is first scaled up to 1080p (bicubic), since we assume a 1080p display. We use the VMAF v1.0.16 models with `--vmaf-10bit`, and each encode is measured twice:
 
