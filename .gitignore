@@ -1,0 +1,9 @@
+.venv
+__pycache__/
+*.py[cod]
+*.y4m
+*.mkv
+*.mp4
+*.webm
+*.frames.json.gz
+.env
