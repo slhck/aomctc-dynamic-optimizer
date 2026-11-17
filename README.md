@@ -84,9 +84,6 @@ Below is one table per codec, for VMAF 5H. Bitrates are the median over all clip
 
 The exact ladder encodes for each clip are in `results/ladder_points_<codec>.csv`.
 
-> [!WARNING]
-> Tables still tbd., the run is ongoing.
-
 <!-- tables:start -->
 
 ### x264
